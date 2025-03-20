@@ -4,12 +4,12 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #ffffff;
+    background-color: hsl(105, 17%, 95%);
     max-width: 1280px;
     margin: auto;
 }
 
-header>img {
+header > img {
     max-width: 100%;
 }
 
@@ -24,9 +24,9 @@ main {
     max-width: 1024px;
     margin: auto;
     margin-top: -50px;
-    border-left: 1px dashed gray;
-    border-right: 1px dashed gray;
-    border-bottom: 1px dashed gray;
+    border-left: 1px dashed rgb(247, 241, 241);
+    border-right: 1px dashed silver;
+    border-bottom: 1px dashed silver;
 }
 
 article {
