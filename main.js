@@ -17,7 +17,11 @@ let marker = L.marker([lat, lng]).addTo(map)
 
 // Popup definieren und öffnen
 
-marker.bindPopup(`<b>Welcome to Picton!</b>
-  <br> 
+marker.bindPopup(`<h2> Picton </h2>
+<ul>
+  <li> Geograph. Br.: ${lat}°</li>
+  <li> Geograph. Länge: ${lng}°</li>
+</ul>
   In the Marlborough Region of New Zealand's South Island. ${lat}/${lng}.
   `).openPopup();
+  
