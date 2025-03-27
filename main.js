@@ -2,8 +2,8 @@
 Skript für Neuseelandreise 
 */
 // Karte initialisieren
-let lat = -41.293056
-let lng = 174.001944
+let lat = -41.29
+let lng = 174.0
 let zoom = 11
 
 let map = L.map('map').setView([lat, lng], zoom);
@@ -19,5 +19,5 @@ let marker = L.marker([lat, lng]).addTo(map)
 
 marker.bindPopup(`<b>Welcome to Picton!</b>
   <br> 
-  In the Marlborough Region of New Zealand's South Island
+  In the Marlborough Region of New Zealand's South Island. ${lat}/${lng}.
   `).openPopup();
