@@ -199,7 +199,7 @@ title: "Mount Cook",
 
 
 // Karte initialisieren
-let map = L.map('map').setView([stop.lat, stop.lng], stop.zoom);
+let map = L.map('map')
 // Hintergrund definieren 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
@@ -212,14 +212,21 @@ for (let i=0; i<STOPS.length;i++) {
   console.log (i, STOPS [i],STOPS [i].title );
   // Marker zeichnen
 let marker = L.marker([STOPS [i].lat,STOPS [i].lng]).addTo(map)
- // Popup definieren und öffnen
+ // Popup definieren 
  marker.bindPopup(`<h2>${STOPS [i].title}</h2>
   <ul>
     <li> Geograph. Breite: ${STOPS [i].lat}°</li>
     <li> Geograph. Länge: ${STOPS [i].lng}°</li>
   </ul>
     In the Marlborough Region of New Zealand's South Island.
-    `).openPopup();
+    `);
+    
+    // auf eigene Etappe blicken und Popup öffnen 
+
+    if (STOPS [i].user == "pauly0602"){
+      map.setView([STOPS [i].lat, STOPS [i].lng], STOPS [i].zoom);
+      marker.openPopup();
+    }
   }
 
 
