@@ -79,7 +79,7 @@ const STOPS = [
     nr: 9,
     title: "Wellington",
     user: "cs4151",
-    lat: "-41.2875",
+    lat: -41.2875,
     lng: 174.776111,
     zoom: 12,
 },
@@ -212,17 +212,19 @@ for (let i=0; i<STOPS.length;i++) {
   console.log (i, STOPS [i],STOPS [i].title );
   // Marker zeichnen
 let marker = L.marker([STOPS [i].lat,STOPS [i].lng]).addTo(map)
- }
+ // Popup definieren und öffnen
+ marker.bindPopup(`<h2>${STOPS [i].title}</h2>
+  <ul>
+    <li> Geograph. Breite: ${STOPS [i].lat}°</li>
+    <li> Geograph. Länge: ${STOPS [i].lng}°</li>
+  </ul>
+    In the Marlborough Region of New Zealand's South Island.
+    `).openPopup();
+  }
 
-// Popup definieren und öffnen
 
-marker.bindPopup(`<h2>${stop.title}</h2>
-<ul>
-  <li> Geograph. Breite: ${stop.lat}°</li>
-  <li> Geograph. Länge: ${stop.lng}°</li>
-</ul>
-  In the Marlborough Region of New Zealand's South Island.
-  `).openPopup();
+
+
 
  
   
