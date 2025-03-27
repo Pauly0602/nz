@@ -13,6 +13,11 @@ let map = L.map('map').setView([lat, lng], zoom);
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 // Marker zeichnen
-let marker = L.marker([lat, lng]).addTo(map);
+let marker = L.marker([lat, lng]).addTo(map)
+
 // Popup definieren und öffnen
-marker.bindPopup("<b>Welcome to Picton!</b><br> In the Marlborough Region of New Zealand's South Island").openPopup();
+
+marker.bindPopup(`<b>Welcome to Picton!</b>
+  <br> 
+  In the Marlborough Region of New Zealand's South Island
+  `).openPopup();
