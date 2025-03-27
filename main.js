@@ -19,9 +19,25 @@ let marker = L.marker([lat, lng]).addTo(map)
 
 marker.bindPopup(`<h2> Picton </h2>
 <ul>
-  <li> Geograph. Br.: ${lat}°</li>
+  <li> Geograph. Breite: ${lat}°</li>
   <li> Geograph. Länge: ${lng}°</li>
 </ul>
-  In the Marlborough Region of New Zealand's South Island. ${lat}/${lng}.
+  In the Marlborough Region of New Zealand's South Island.
   `).openPopup();
+
+  let course = {title: "Picton",
+                user: "pauly0602",
+                nr: 10,
+                lat: -41.29,
+                lng: 174.0,
+                zoom: 11,
+   };
+   console.log("title", course.title );
+   console.log("user", course.user);
+   console.log("nr", course.nr);
+   console.log("lat", course.lat);
+   console.log("lng", course.lng);
+   console.log("zoom", course.zoom);
+
+
   
