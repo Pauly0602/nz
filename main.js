@@ -25,7 +25,7 @@ const STOPS = [
     user: "Ellinnaa",
     lat:-35.183333,
     lng: 174.166667,
-    zoom:11,
+    zoom: 11,
 },
 {
     nr: 3,
@@ -38,7 +38,7 @@ const STOPS = [
  {  
     nr: 4,
     title: "Cormandel Peninsula",
-    usr:"Gregorysprenger2001",
+    user:"Gregorysprenger2001",
     lat: -37.882778,
     lng: 175.636667,
     zoom: 11,
@@ -165,7 +165,7 @@ const STOPS = [
 },
 {
     nr: 24,
-    titel: "Moeraki Boulders",
+    title: "Moeraki Boulders",
     user: "StephanPumpernik",
     lat: -45.345275,
     lng: 170.826061,
